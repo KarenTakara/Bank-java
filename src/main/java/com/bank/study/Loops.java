@@ -26,11 +26,11 @@ public class Loops {
             System.out.println(nome);
         }
 
-        for (String nome: nomes){
+        for (String nome: nomes){            //for each
             System.out.println(nome);
         }
 
-        nomes.forEach(nome -> {
+        nomes.forEach(nome -> {        //for each com Lambda (->)
             System.out.println(nome);
         });
     }

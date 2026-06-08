@@ -6,9 +6,8 @@ public class Agencia {
     private String nomeAgencia;
     private String cidadeAgencia;
 
-    public Agencia(String idAgencia, String nomeAgencia, String cidadeAgencia){
+    public Agencia(String nomeAgencia, String cidadeAgencia){
         this.cidadeAgencia = cidadeAgencia;
-        this.idAgencia = idAgencia;
         this.nomeAgencia = nomeAgencia;
     }
 

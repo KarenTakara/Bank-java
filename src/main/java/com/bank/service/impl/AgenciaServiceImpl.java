@@ -5,6 +5,7 @@ import com.bank.repository.AgenciaRepository;
 import com.bank.repository.impl.AgenciaRepositoryImpl;
 import com.bank.service.AgenciaService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class AgenciaServiceImpl implements AgenciaService {
@@ -16,9 +17,15 @@ public class AgenciaServiceImpl implements AgenciaService {
 
     @Override
     public void adicionar(Agencia agencia) {         //metodos que tem void nao tem return
-        if (agencia.getCidadeAgencia() != null && agencia.getCidadeAgencia().length() > 5){
+        if (agencia.getCidadeAgencia() != null && agencia.getCidadeAgencia().length() > 3){
+            agencia.setIdAgencia(LocalDate.now().toString());
             repository.adicionar(agencia);
+
         }
+        else {
+            throw new RuntimeException("cidade preenchida incorretamente!");
+        }
+
         //to do
     }
 

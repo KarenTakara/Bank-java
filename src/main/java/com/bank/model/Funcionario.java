@@ -6,8 +6,7 @@ public class Funcionario extends Pessoa {
     private Setores setor;
     private Cargos cargo;
 
-    public Funcionario (String idFuncionario, Setores setor, Cargos cargo){
-        this.idFuncionario = idFuncionario;
+    public Funcionario (Setores setor, Cargos cargo){
         this.setor = setor;
         this.cargo = cargo;
     }
